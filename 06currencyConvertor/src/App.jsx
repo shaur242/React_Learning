@@ -8,7 +8,7 @@ function App() {
   const [amount, setAmount] = useState(0)
   const [from, setFrom] = useState("usd")
   const [to, setTo] = useState("inr")
-  const [conevertedAmount, setConvertedAmount] = useState(0);
+  const [convertedAmount, setConvertedAmount] = useState(0);
 
   const CurrencyInfo = useCurrencyInfo(from)
 
@@ -62,7 +62,7 @@ function App() {
             <div className="w-full mt-1 mb-4">
               <InputBox
                 label="To"
-                amount={conevertedAmount}
+                amount={convertedAmount}
                 currencyOptions={options}
                 onCurrencyChange={(currency) => setTo(currency)}
                 onAmountChange={(amount) => setAmount(amount)}
